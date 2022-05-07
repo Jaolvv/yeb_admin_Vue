@@ -17,7 +17,7 @@ axios.interceptors.response.use(success=>{
     // 返回成功
     return success.data;
 
-//
+// 返回消息
 },error=>{
     if(error.response.code == 504 || error.response.code == 404){
         Message.error({message:'服务器出问题咯！'});

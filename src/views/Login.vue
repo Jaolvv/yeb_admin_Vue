@@ -31,7 +31,7 @@ export default {
       captchaUrl: "",
       loginForm: {
         username: "admin",
-        password: "123",
+        password: "1235",
         code: "",
       },
       checked: true,
