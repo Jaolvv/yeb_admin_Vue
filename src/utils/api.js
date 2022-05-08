@@ -2,6 +2,7 @@ import axios from "axios";
 import { Message } from "element-ui";
 import router from '../router';
 
+//响应拦截器
 axios.interceptors.response.use(success=>{
     // 业务逻辑错误1
     if(success.status && success.status == 200){
@@ -35,3 +36,14 @@ axios.interceptors.response.use(success=>{
     }
     return;
 });
+
+let base = '';
+
+//传送Json格式的post请求
+export const postRequest = (url, params) => {
+    return axios({
+        method:'post',
+        url:'${base}${url}',
+        data:params
+    })
+}
